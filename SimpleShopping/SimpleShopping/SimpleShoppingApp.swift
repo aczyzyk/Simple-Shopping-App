@@ -9,9 +9,27 @@ import SwiftUI
 
 @main
 struct SimpleShoppingApp: App {
+    
+    init() {
+        registerDependencies()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CatalogView()
         }
     }
+    
+}
+
+//MARK: - Register dependencies
+
+extension SimpleShoppingApp {
+    
+    private func registerDependencies() {
+        DIContainer.shared.register(service: ProductsServiceProtocol.self) { _ in
+            MockProductsService(products: nil)
+        }
+    }
+    
 }
