@@ -15,19 +15,28 @@ struct CatalogView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(vm.products) { product in
-                    productTile(product)
+            VStack {
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: BasketView(),
+                                   label: { CheckoutButton() })
                 }
+                .padding()
+                List {
+                    ForEach(vm.products) { product in
+                        productTile(product)
+                    }
+                }
+                .navigationTitle("Product Catalog")
+                .task { vm.loadProducts() }
             }
-            .navigationTitle("Product Catalog")
-            .task { vm.loadProducts() }
         }
+        .environmentObject(vm.basket)
     }
     
     private func productTile(_ product: Product) -> some View {
         HStack {
-            Image(systemName: "plus.square.fill")
+            Image(systemName: "cart.badge.plus")
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .onTapGesture { vm.addToBasket(id: product.id) }
             Text(product.name)
@@ -45,3 +54,5 @@ struct CatalogView: View {
 #Preview {
     CatalogView()
 }
+
+

@@ -10,6 +10,7 @@ import Foundation
 class CatalogViewModel: ObservableObject {
     
     let productsService: ProductsServiceProtocol
+    let basket = BasketViewModel()
     
     @Published var products: [Product] = []
     
@@ -29,8 +30,9 @@ class CatalogViewModel: ObservableObject {
     }
     
     func addToBasket(id: Int) {
-        //TODO:
-        print("ADD TO BASKET: \(id)")
+        if let product = products.first(where: { $0.id == id }) {
+            basket.addItem(product)
+        }
     }
     
 }
