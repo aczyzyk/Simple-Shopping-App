@@ -6,18 +6,30 @@
 //
 
 import Foundation
-
-struct BasketItem: Identifiable {
-    let id = UUID()
-    let product: Product
-    var quantity: Int
-    var value: Double { product.price * Double(quantity) }
-}
+import Combine
 
 class BasketViewModel: ObservableObject {
-
+    
+    private let currenciesService: CurrenciesServiceProtocol
+    
     @Published var items: [BasketItem] = []
-    @Published var totalValue: Double = 0
+    @Published var availableCurrencies: [Currency] = []
+    @Published var selectedCurrency: Currency = Currency(symbol: "USD", rate: 1.0)
+    
+    private var subscribers = Set<AnyCancellable>()
+    
+    var totalValue: Double {
+        items.map { $0.value }.reduce(0, { $0 + $1 })
+    }
+    
+    var convertedTotalValue: Double {
+        currenciesService.convert(totalValue, to: selectedCurrency)
+    }
+    
+    init(currenciesService: CurrenciesServiceProtocol) {
+        self.currenciesService = currenciesService
+        observeCurrencies()
+    }
     
     func addItem(_ product: Product, quantity: Int = 1) {
         if let index = items.firstIndex(where: { $0.product == product }) {
@@ -25,7 +37,6 @@ class BasketViewModel: ObservableObject {
         } else {
             items.append(BasketItem(product: product, quantity: quantity))
         }
-        updateValues()
     }
     
     func removeItem(_ product: Product, quantity: Int = 1) {
@@ -36,11 +47,16 @@ class BasketViewModel: ObservableObject {
         if items[index].quantity <= 0 {
             items.remove(at: index)
         }
-        updateValues()
     }
     
-    private func updateValues() {
-        totalValue = items.map { $0.value }.reduce(0, { $0 + $1 })
+    private func observeCurrencies() {
+        currenciesService.currenciesPublisher.sink { [weak self] currencies in
+            self?.availableCurrencies = currencies
+            if let firstCurrency = currencies.first {
+                self?.selectedCurrency = firstCurrency
+            }
+        }
+        .store(in: &subscribers)
     }
     
 }

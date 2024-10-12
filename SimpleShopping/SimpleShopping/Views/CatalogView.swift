@@ -36,9 +36,6 @@ struct CatalogView: View {
     
     private func productTile(_ product: Product) -> some View {
         HStack {
-            Image(systemName: "cart.badge.plus")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .onTapGesture { vm.addToBasket(id: product.id) }
             Text(product.name)
                 .font(.headline)
             Spacer()
@@ -46,6 +43,9 @@ struct CatalogView: View {
                 Text("$"+String(format: "%.2f", product.price))
                 Text(" per \(product.unit)")
             }
+            Image(systemName: "cart.badge.plus")
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .onTapGesture { vm.addToBasket(id: product.id) }
         }
     }
     

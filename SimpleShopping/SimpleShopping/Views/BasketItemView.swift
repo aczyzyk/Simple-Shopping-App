@@ -15,9 +15,6 @@ struct BasketItemView: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            Image(systemName: "cart.badge.minus")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .onTapGesture { basket.removeItem(item.product) }
             VStack(alignment: .leading) {
                 Text(item.product.name)
                     .font(.headline)
@@ -26,6 +23,12 @@ struct BasketItemView: View {
             Spacer()
             Text("$"+String(format: "%.2f", item.value))
                 .font(.headline)
+            Image(systemName: "cart.badge.minus")
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .onTapGesture { basket.removeItem(item.product) }
+            Image(systemName: "cart.badge.plus")
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .onTapGesture { basket.addItem(item.product) }
         }
     }
     

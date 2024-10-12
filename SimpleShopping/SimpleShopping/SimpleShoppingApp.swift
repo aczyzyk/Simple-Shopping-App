@@ -30,6 +30,13 @@ extension SimpleShoppingApp {
         DIContainer.shared.register(service: ProductsServiceProtocol.self) { _ in
             MockProductsService(products: nil)
         }
+        DIContainer.shared.register(service: ConversionRatesServiceProtocol.self) { _ in
+            MockConversionRatesService()
+        }
+        DIContainer.shared.register(service: CurrenciesServiceProtocol.self) { resolver in
+            let conversionRatesService = resolver.resolve(ConversionRatesServiceProtocol.self)
+            return CurrenciesService(conversionRatesService: conversionRatesService)
+        }
     }
     
 }

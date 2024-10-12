@@ -9,8 +9,8 @@ import Foundation
 
 class CatalogViewModel: ObservableObject {
     
-    let productsService: ProductsServiceProtocol
-    let basket = BasketViewModel()
+    private let productsService: ProductsServiceProtocol
+    let basket = BasketViewModel(currenciesService: DIContainer.shared.resolve(CurrenciesServiceProtocol.self))
     
     @Published var products: [Product] = []
     

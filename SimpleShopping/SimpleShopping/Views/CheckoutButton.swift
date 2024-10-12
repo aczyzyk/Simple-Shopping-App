@@ -16,7 +16,12 @@ struct CheckoutButton: View {
             HStack {
                 Image(systemName: "cart")
                     .font(.title)
-                Text("\(basket.items.count) items")
+                VStack(alignment: .trailing) {
+                    Text("$\(String(format: "%.2f", basket.totalValue))")
+                        .font(.subheadline)
+                    Text("\(basket.items.count) items")
+                        .font(.subheadline)
+                }
             }
             .foregroundColor(.white)
             .padding()
@@ -28,5 +33,5 @@ struct CheckoutButton: View {
 
 #Preview {
     CheckoutButton()
-        .environmentObject(BasketViewModel())
+        .environmentObject(BasketViewModel(currenciesService: DIContainer.shared.resolve(CurrenciesServiceProtocol.self)))
 }

@@ -40,6 +40,30 @@
 		40572E322CB9303100187A8C /* BasketItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E312CB9303100187A8C /* BasketItemView.swift */; };
 		40572E332CB9303100187A8C /* BasketItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E312CB9303100187A8C /* BasketItemView.swift */; };
 		40572E342CB9303100187A8C /* BasketItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E312CB9303100187A8C /* BasketItemView.swift */; };
+		40572E372CB93BBC00187A8C /* conversion_rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 40572E362CB93BBC00187A8C /* conversion_rates.json */; };
+		40572E382CB93BBC00187A8C /* conversion_rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 40572E362CB93BBC00187A8C /* conversion_rates.json */; };
+		40572E392CB93BBC00187A8C /* conversion_rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 40572E362CB93BBC00187A8C /* conversion_rates.json */; };
+		40572E3F2CB93FB300187A8C /* MockConversionRatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E3E2CB93FB300187A8C /* MockConversionRatesService.swift */; };
+		40572E402CB93FB300187A8C /* MockConversionRatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E3E2CB93FB300187A8C /* MockConversionRatesService.swift */; };
+		40572E412CB93FB300187A8C /* MockConversionRatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E3E2CB93FB300187A8C /* MockConversionRatesService.swift */; };
+		40572E432CB9451600187A8C /* ConversionRatesTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E422CB9451600187A8C /* ConversionRatesTable.swift */; };
+		40572E442CB9451600187A8C /* ConversionRatesTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E422CB9451600187A8C /* ConversionRatesTable.swift */; };
+		40572E452CB9451600187A8C /* ConversionRatesTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E422CB9451600187A8C /* ConversionRatesTable.swift */; };
+		40572E472CB9470900187A8C /* ConversionRatesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E462CB9470900187A8C /* ConversionRatesServiceProtocol.swift */; };
+		40572E482CB9470900187A8C /* ConversionRatesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E462CB9470900187A8C /* ConversionRatesServiceProtocol.swift */; };
+		40572E492CB9470900187A8C /* ConversionRatesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E462CB9470900187A8C /* ConversionRatesServiceProtocol.swift */; };
+		40572E4B2CB9494A00187A8C /* CurrenciesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E4A2CB9494A00187A8C /* CurrenciesServiceProtocol.swift */; };
+		40572E4C2CB9494A00187A8C /* CurrenciesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E4A2CB9494A00187A8C /* CurrenciesServiceProtocol.swift */; };
+		40572E4D2CB9494A00187A8C /* CurrenciesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E4A2CB9494A00187A8C /* CurrenciesServiceProtocol.swift */; };
+		40572E4F2CB94AA400187A8C /* CurrenciesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E4E2CB94AA400187A8C /* CurrenciesService.swift */; };
+		40572E502CB94AA400187A8C /* CurrenciesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E4E2CB94AA400187A8C /* CurrenciesService.swift */; };
+		40572E512CB94AA400187A8C /* CurrenciesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E4E2CB94AA400187A8C /* CurrenciesService.swift */; };
+		40572E532CB9610200187A8C /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E522CB9610200187A8C /* Currency.swift */; };
+		40572E542CB9610200187A8C /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E522CB9610200187A8C /* Currency.swift */; };
+		40572E552CB9610200187A8C /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E522CB9610200187A8C /* Currency.swift */; };
+		40572E572CBA656C00187A8C /* BasketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E562CBA656C00187A8C /* BasketItem.swift */; };
+		40572E582CBA656C00187A8C /* BasketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E562CBA656C00187A8C /* BasketItem.swift */; };
+		40572E592CBA656C00187A8C /* BasketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572E562CBA656C00187A8C /* BasketItem.swift */; };
 		40C30DF22CB529E3004C4DD5 /* SimpleShoppingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C30DF12CB529E3004C4DD5 /* SimpleShoppingApp.swift */; };
 		40C30DF42CB529E3004C4DD5 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C30DF32CB529E3004C4DD5 /* CatalogView.swift */; };
 		40C30E032CB529E5004C4DD5 /* SimpleShoppingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C30E022CB529E5004C4DD5 /* SimpleShoppingTests.swift */; };
@@ -76,6 +100,14 @@
 		40572E292CB9163F00187A8C /* CheckoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutButton.swift; sourceTree = "<group>"; };
 		40572E2D2CB9259B00187A8C /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		40572E312CB9303100187A8C /* BasketItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketItemView.swift; sourceTree = "<group>"; };
+		40572E362CB93BBC00187A8C /* conversion_rates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conversion_rates.json; sourceTree = "<group>"; };
+		40572E3E2CB93FB300187A8C /* MockConversionRatesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConversionRatesService.swift; sourceTree = "<group>"; };
+		40572E422CB9451600187A8C /* ConversionRatesTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionRatesTable.swift; sourceTree = "<group>"; };
+		40572E462CB9470900187A8C /* ConversionRatesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionRatesServiceProtocol.swift; sourceTree = "<group>"; };
+		40572E4A2CB9494A00187A8C /* CurrenciesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesServiceProtocol.swift; sourceTree = "<group>"; };
+		40572E4E2CB94AA400187A8C /* CurrenciesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesService.swift; sourceTree = "<group>"; };
+		40572E522CB9610200187A8C /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		40572E562CBA656C00187A8C /* BasketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketItem.swift; sourceTree = "<group>"; };
 		40C30DEE2CB529E3004C4DD5 /* SimpleShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C30DF12CB529E3004C4DD5 /* SimpleShoppingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleShoppingApp.swift; sourceTree = "<group>"; };
 		40C30DF32CB529E3004C4DD5 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
@@ -114,6 +146,9 @@
 		40156CC42CB7C71B00711162 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				40572E562CBA656C00187A8C /* BasketItem.swift */,
+				40572E422CB9451600187A8C /* ConversionRatesTable.swift */,
+				40572E522CB9610200187A8C /* Currency.swift */,
 				40156CC52CB7C73F00711162 /* Product.swift */,
 			);
 			path = Models;
@@ -123,8 +158,12 @@
 			isa = PBXGroup;
 			children = (
 				40156CD72CB7CF0800711162 /* DIContainer.swift */,
+				40572E462CB9470900187A8C /* ConversionRatesServiceProtocol.swift */,
+				40572E4A2CB9494A00187A8C /* CurrenciesServiceProtocol.swift */,
 				40156CCE2CB7CA2F00711162 /* ProductsServiceProtocol.swift */,
+				40572E4E2CB94AA400187A8C /* CurrenciesService.swift */,
 				40156CD22CB7CAB200711162 /* MockProductsService.swift */,
+				40572E3E2CB93FB300187A8C /* MockConversionRatesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -148,6 +187,14 @@
 				40156CDF2CB7E38700711162 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		40572E352CB93BA700187A8C /* Mock data */ = {
+			isa = PBXGroup;
+			children = (
+				40572E362CB93BBC00187A8C /* conversion_rates.json */,
+			);
+			path = "Mock data";
 			sourceTree = "<group>";
 		};
 		40C30DE52CB529E3004C4DD5 = {
@@ -177,6 +224,7 @@
 				40156CCD2CB7CA0100711162 /* Services */,
 				40156CC42CB7C71B00711162 /* Models */,
 				40156CD62CB7CDBF00711162 /* Views */,
+				40572E352CB93BA700187A8C /* Mock data */,
 				40156CE42CB7E40100711162 /* Assets.xcassets */,
 				40156CE02CB7E38700711162 /* Preview Content */,
 			);
@@ -305,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40156CE52CB7E40100711162 /* Assets.xcassets in Resources */,
+				40572E372CB93BBC00187A8C /* conversion_rates.json in Resources */,
 				40156CE12CB7E38700711162 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40156CE62CB7E40100711162 /* Assets.xcassets in Resources */,
+				40572E382CB93BBC00187A8C /* conversion_rates.json in Resources */,
 				40156CE22CB7E38700711162 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40156CE72CB7E40100711162 /* Assets.xcassets in Resources */,
+				40572E392CB93BBC00187A8C /* conversion_rates.json in Resources */,
 				40156CE32CB7E38700711162 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,15 +387,22 @@
 			files = (
 				40572E2E2CB9259C00187A8C /* BasketView.swift in Sources */,
 				40572E2A2CB9163F00187A8C /* CheckoutButton.swift in Sources */,
+				40572E572CBA656C00187A8C /* BasketItem.swift in Sources */,
 				40156CCF2CB7CA2F00711162 /* ProductsServiceProtocol.swift in Sources */,
+				40572E472CB9470900187A8C /* ConversionRatesServiceProtocol.swift in Sources */,
 				40572E322CB9303100187A8C /* BasketItemView.swift in Sources */,
+				40572E432CB9451600187A8C /* ConversionRatesTable.swift in Sources */,
+				40572E4F2CB94AA400187A8C /* CurrenciesService.swift in Sources */,
 				40572E262CB90F2D00187A8C /* BasketViewModel.swift in Sources */,
 				40156CD32CB7CAB200711162 /* MockProductsService.swift in Sources */,
 				40156CDC2CB7D1BB00711162 /* CatalogViewModel.swift in Sources */,
 				40C30DF42CB529E3004C4DD5 /* CatalogView.swift in Sources */,
 				40C30DF22CB529E3004C4DD5 /* SimpleShoppingApp.swift in Sources */,
+				40572E532CB9610200187A8C /* Currency.swift in Sources */,
+				40572E3F2CB93FB300187A8C /* MockConversionRatesService.swift in Sources */,
 				40156CD82CB7CF0800711162 /* DIContainer.swift in Sources */,
 				40156CC62CB7C73F00711162 /* Product.swift in Sources */,
+				40572E4B2CB9494A00187A8C /* CurrenciesServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,16 +410,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40572E402CB93FB300187A8C /* MockConversionRatesService.swift in Sources */,
+				40572E542CB9610200187A8C /* Currency.swift in Sources */,
 				40572E2F2CB9259C00187A8C /* BasketView.swift in Sources */,
+				40572E4C2CB9494A00187A8C /* CurrenciesServiceProtocol.swift in Sources */,
 				40156CDD2CB7D1BB00711162 /* CatalogViewModel.swift in Sources */,
 				40572E2B2CB9163F00187A8C /* CheckoutButton.swift in Sources */,
 				40C30E032CB529E5004C4DD5 /* SimpleShoppingTests.swift in Sources */,
 				40572E332CB9303100187A8C /* BasketItemView.swift in Sources */,
 				40572E272CB90F2D00187A8C /* BasketViewModel.swift in Sources */,
+				40572E442CB9451600187A8C /* ConversionRatesTable.swift in Sources */,
 				40156CC72CB7C73F00711162 /* Product.swift in Sources */,
 				40156CD92CB7CF0800711162 /* DIContainer.swift in Sources */,
+				40572E582CBA656C00187A8C /* BasketItem.swift in Sources */,
 				40156CD02CB7CA2F00711162 /* ProductsServiceProtocol.swift in Sources */,
 				40156CD42CB7CAB200711162 /* MockProductsService.swift in Sources */,
+				40572E482CB9470900187A8C /* ConversionRatesServiceProtocol.swift in Sources */,
+				40572E502CB94AA400187A8C /* CurrenciesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,15 +436,22 @@
 			files = (
 				40572E302CB9259C00187A8C /* BasketView.swift in Sources */,
 				40572E2C2CB9163F00187A8C /* CheckoutButton.swift in Sources */,
+				40572E592CBA656C00187A8C /* BasketItem.swift in Sources */,
 				40156CD12CB7CA2F00711162 /* ProductsServiceProtocol.swift in Sources */,
+				40572E492CB9470900187A8C /* ConversionRatesServiceProtocol.swift in Sources */,
 				40572E342CB9303100187A8C /* BasketItemView.swift in Sources */,
+				40572E452CB9451600187A8C /* ConversionRatesTable.swift in Sources */,
+				40572E512CB94AA400187A8C /* CurrenciesService.swift in Sources */,
 				40572E282CB90F2D00187A8C /* BasketViewModel.swift in Sources */,
 				40156CD52CB7CAB200711162 /* MockProductsService.swift in Sources */,
 				40156CDE2CB7D1BB00711162 /* CatalogViewModel.swift in Sources */,
 				40C30E0F2CB529E5004C4DD5 /* SimpleShoppingUITestsLaunchTests.swift in Sources */,
 				40C30E0D2CB529E5004C4DD5 /* SimpleShoppingUITests.swift in Sources */,
+				40572E552CB9610200187A8C /* Currency.swift in Sources */,
+				40572E412CB93FB300187A8C /* MockConversionRatesService.swift in Sources */,
 				40156CDA2CB7CF0800711162 /* DIContainer.swift in Sources */,
 				40156CC82CB7C73F00711162 /* Product.swift in Sources */,
+				40572E4D2CB9494A00187A8C /* CurrenciesServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

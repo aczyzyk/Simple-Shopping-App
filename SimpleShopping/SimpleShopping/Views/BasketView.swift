@@ -18,7 +18,19 @@ struct BasketView: View {
                 Text("Total: $\(String(format: "%.2f", vm.totalValue))")
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             }
-            .padding()
+            .padding(.horizontal)
+            if !vm.availableCurrencies.isEmpty {
+                HStack {
+                    Spacer()
+                    Picker("Currency", selection: $vm.selectedCurrency) {
+                        ForEach(vm.availableCurrencies) { currency in
+                            Text(currency.symbol).tag(currency)
+                        }
+                    }
+                    Text(String(format: "%.2f", vm.convertedTotalValue))
+                }
+                .padding(.horizontal)
+            }
             List {
                 ForEach(vm.items) { item in
                     BasketItemView(item: item)
@@ -32,5 +44,5 @@ struct BasketView: View {
 
 #Preview {
     BasketView()
-        .environmentObject(BasketViewModel())
+        .environmentObject(BasketViewModel(currenciesService: DIContainer.shared.resolve(CurrenciesServiceProtocol.self)))
 }
