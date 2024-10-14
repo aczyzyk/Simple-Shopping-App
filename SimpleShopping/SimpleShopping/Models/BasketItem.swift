@@ -11,5 +11,8 @@ struct BasketItem: Identifiable {
     let id = UUID()
     let product: Product
     var quantity: Int
+}
+
+extension BasketItem {
     var value: Double { product.price * Double(quantity) }
 }

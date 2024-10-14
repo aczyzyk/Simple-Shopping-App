@@ -12,3 +12,7 @@ struct Currency: Identifiable, Hashable {
     let symbol: String
     let rate: Double
 }
+
+extension Currency {
+    static let baseCurrency = Currency(symbol: "USD", rate: 1.0)
+}

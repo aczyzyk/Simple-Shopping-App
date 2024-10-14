@@ -14,7 +14,7 @@ class BasketViewModel: ObservableObject {
     
     @Published var items: [BasketItem] = []
     @Published var availableCurrencies: [Currency] = []
-    @Published var selectedCurrency: Currency = Currency(symbol: "USD", rate: 1.0)
+    @Published var selectedCurrency: Currency = Currency.baseCurrency
     
     private var subscribers = Set<AnyCancellable>()
     
@@ -52,9 +52,7 @@ class BasketViewModel: ObservableObject {
     private func observeCurrencies() {
         currenciesService.currenciesPublisher.sink { [weak self] currencies in
             self?.availableCurrencies = currencies
-            if let firstCurrency = currencies.first {
-                self?.selectedCurrency = firstCurrency
-            }
+            self?.selectedCurrency = currencies.first ?? Currency.baseCurrency
         }
         .store(in: &subscribers)
     }
